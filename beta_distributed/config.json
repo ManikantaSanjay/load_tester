@@ -1,0 +1,39 @@
+[
+    {
+        "url": "http://example.com",
+        "qps": 10,
+        "duration": 60,
+        "concurrency": 5,
+        "args": {
+            "data": {"key": "value"},
+            "pattern": "steady",
+            "method": "POST"
+        }
+    },
+    {
+        "url": "http://example.org",
+        "qps": 20,
+        "duration": 120,
+        "concurrency": 10,
+        "args": {
+            "pattern": "spike",
+            "spike_duration": 10,
+            "spike_load": 30,
+            "method": "GET"
+        }
+    },
+    {
+        "url": "http://example.net",
+        "qps": 5,
+        "duration": 30,
+        "concurrency": 2,
+        "args": {
+            "data": {"update": "info"},
+            "pattern": "periodic",
+            "spike_interval": 10,
+            "spike_duration": 3,
+            "spike_load": 10,
+            "method": "PATCH"
+        }
+    }
+]
