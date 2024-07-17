@@ -107,7 +107,7 @@ To run a test, use the main.py script with desired parameters. Here are the comm
 #### Example command:
 
 ```
-python main.py https://example.com --qps 10 --duration 60 -c 5 --method GET --pattern steady
+python main.py https://example.com --qps 10 --duration 60 -c 5 --method GET steady
 ```
 
 
@@ -126,7 +126,7 @@ docker run manikantasanjay1999/loadtest:v3 \
     --duration 60 \
     -c 5 \
     --method GET \
-    --pattern steady
+    steady
 ```
 
 #### Example 2: Spike Load Test
@@ -139,7 +139,7 @@ docker run manikantasanjay1999/loadtest:v3 \
     --duration 60 \
     -c 15 \
     --method GET \
-    --pattern spike \
+    spike \
     --spike_duration 5 \
     --spike_load 30
 ```
@@ -154,7 +154,7 @@ docker run manikantasanjay1999/loadtest:v3 \
     --duration 120 \
     -c 10 \
     --method GET \
-    --pattern periodic \
+    periodic \
     --spike_interval 20 \
     --spike_duration 5 \
     --spike_load 20
